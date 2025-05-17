@@ -60,25 +60,25 @@
 - ファイル名を変えなくてもCloudflare Pagesでキャッシュを最新にする
 
 ✅ 方針
-内容	                             方針
-ファイル名は変更しない            	 Cloudflare Pagesがデプロイ時にキャッシュを自動更新
-変更後はGitでPushするだけ	          Git Push → 自動デプロイ → キャッシュ更新
-即時確認はDevelopment Modeを使う	  本番に影響せず、オリジンから直接読ませる
-Zone IDでのPurgeは使わない	        Pagesは通常のDNSサイトと別枠（対象外）
+- 内容	                             方針
+- ファイル名は変更しない            	 Cloudflare Pagesがデプロイ時にキャッシュを自動更新
+- 変更後はGitでPushするだけ	          Git Push → 自動デプロイ → キャッシュ更新
+- 即時確認はDevelopment Modeを使う	  本番に影響せず、オリジンから直接読ませる
+- Zone IDでのPurgeは使わない	        Pagesは通常のDNSサイトと別枠（対象外）
 
 ✅ 運用手順
 🔹 更新
-    画像やJSファイルを修正
-    Gitでコミット & Push
-    Cloudflare Pagesが自動で新しいデプロイを行う
-    CDNキャッシュも自動更新
-git add .
-git commit -m "fix: update images"
-git push
+    - 画像やJSファイルを修正
+    - Gitでコミット & Push
+    - Cloudflare Pagesが自動で新しいデプロイを行う
+    - CDNキャッシュも自動更新
+- git add .
+- git commit -m "fix: update images"
+- git push
 
 🔹 注意点
-通常はファイル名変更不要
-Development Modeを使えば「名前を変えずに」即時確認可能
-Zone IDでのPurgeは不要、無意味（Pagesは対象外）
+- 通常はファイル名変更不要
+- Development Modeを使えば「名前を変えずに」即時確認可能
+- Zone IDでのPurgeは不要、無意味（Pagesは対象外）
 
 
